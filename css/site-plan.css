@@ -1,0 +1,186 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #fb3640;
+  --secondary-color: #fbaf00;
+  --accent1-color: #fbfffe;
+  --accent2-color: #6d676e;
+  --accent3-color: #1b1b1e;
+  --accent4-color: #0f8b8d;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: 'Montserrat', sans-serif;;
+  --paragraph-font: 'Montserrat', sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #1b1b1e;  /* headlines on a white background */ 
+  --headline-color-on-color: #fbfffe; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #1b1b1e; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #fbfffe; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #1b1b1e;
+  --nav-link-color: #fbaf00;
+  --nav-background-color: #fbfffe;
+  --nav-hover-link-color: #fbfffe;
+  --nav-hover-background-color: #0f8b8d;
+}
+
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+html {
+  background-color: #fbfffe;
+}
+body {
+  max-width: 940px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1em;
+}
+img {
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+header {
+  padding: 1em;
+  text-align: center;
+  color: #1b1b1e;
+  background-color: #1b1b1e;
+}
+header > h1, header > h2 {
+  color: #fbfffe;
+}
+
+.one {font-weight: bolder; font-size: 3em}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color);
+  padding: 1em;
+}
+
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #6d676e;
+  color: #1b1b1e;
+}
+.colors td{
+  width: 16%;
+  height: 3em;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2{
+  background-color: var(--accent2-color);
+}
+.accent3{
+  background-color: var(--accent3-color);
+}
+.accent4{
+  background-color: var(--accent4-color);
+}
+
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+nav > ul {
+  list-style-type: none;
+  display: flex;
+
+}
+nav a {
+  padding:1em;
+  min-width: 70px;
+}
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+.sitemap {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+.sitemap > div {
+
+  text-align: center;
+
+}
+.sm-home {
+  grid-area: home;
+  background-color: #0f8b8d;
+  line-height: 3em;
+  color: #fbfffe;
+}
+.sm-page2 {
+  grid-area: page2;
+  background-color: #0f8b8d;
+  line-height: 3em;
+  color: #fbfffe;
+}
+.sm-page3 {
+  grid-area: page3;
+  background-color: #0f8b8d;
+  line-height: 3em;
+  color: #fbfffe;
+}
+
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+
+.left {
+  grid-area: left;
+  border-top: 1px solid #6d676e;
+  border-left: 1px solid #6d676e;
+}
+
+.right {
+  grid-area: right;
+  border-top: 1px solid #6d676e;
+  border-right: 1px solid #6d676e;
+}
+
+.photo {
+  border: 2px solid;
+}
+
+.logoimg {
+  background: #1B1B1E;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam 1 - Nicole Carrasco</title>
+</head>
+<body>
+    <header>
+        <h1>Exam 1 - part 2</h1>
+        <h2>Nicole Carrasco</h2>
+    </header>
+    <main>
+        <h3>Calculate volume of a cylinder</h3>
+        <label>Enter radius: <input type="text" id="radius"></label>
+        <label>Enter height: <input type="text" id="height"></label>
+        <label><button onclick="volume()">Calculate Volume</button></label>
+        <hr>
+        <div id="output"></div>
+    </main>
+    <script>
+        function volume() { 
+        // Input: get the radius and height of the cylinder from the user.
+        let r = parseFloat(document.getElementById('radius').value);
+        let h = parseFloat(document.getElementById('height').value);
+
+        // Process 1: obtain the volume of the cylinder.
+        let v = Math.PI * r * r * h;
+
+        // Process 2: round
+        v = Math.round(v);
+
+        // Output: Display net pay for the user to see
+        document.getElementById('output').innerHTML = "The cylender's volume is " + v;
+        }
+    </script>
+</body>
+</html>

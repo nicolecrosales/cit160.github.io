@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nicole Carrasco</title>
+    <link href="css/footwear.css" rel="stylesheet" />
+    <script src="js/footwear.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>How is the weather today?</h1>
+    </header>
+    <main>
+        <h3>What footwear can I wear today according to the weather?</h3>
+        <label>Choose the weather:</label>
+        <select id="weather">
+            <option value="">--Please choose an option--</option>
+            <option value="hot">Hot</option>
+            <option value="rain">Rain</option>
+            <option value="snow">Snow</option>
+            <option value="another">Another weather</option>
+        </select>
+        <label><button onclick="footwear()">See Footwear</button></label>
+        <hr>
+        <div><span id="output"></span></div>
+    </main>
+    <footer>
+        &copy;2021 &bull; Nicole Carrasco &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam 1 - Nicole Carrasco</title>
+</head>
+<body>
+    <header>
+        <h1>Exam 1 - part 2</h1>
+        <h2>Nicole Carrasco</h2>
+    </header>
+    <main>
+        <h3>Add work hours</h3>
+        <label>Enter total regular hours: <input type="text" id="trh"></label>
+        <label>Enter total overtime hours: <input type="text" id="toh"></label>
+        <label><button onclick="addHours()">Calculate Salary</button></label>
+        <hr>
+        <div id="output"></div>
+    </main>
+    <script>
+        function addHours() { 
+        // Input: get the total regular hours and total overtime.
+        let regularhours = parseFloat(document.getElementById('trh').value);
+        let overtimehours = parseFloat(document.getElementById('toh').value);
+
+        // Process one: obtain regular pay and overtime pay and gross pay.
+        let regularpay = regularhours * 15;
+        let overtimepay = overtimehours * 22.50;
+        let grossPay = regularpay + overtimepay;
+
+        // Process two: get tax amount.
+        let tax = grossPay * 0.15;
+
+        // Process three: get the net pay.
+        let netPay = grossPay - tax;
+
+        //Process four: two decimals
+        let digits = 2;
+        let multiplier = Math.pow(10, digits);
+        netPay = Math.round(netPay * multiplier) / multiplier;
+
+        // Output: Display net pay for the user to see
+        document.getElementById('output').innerHTML = "$" + netPay;
+        }
+    </script>
+</body>
+</html>
