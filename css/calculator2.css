@@ -37,7 +37,6 @@ main {
 label {
   font-size: 1em;
   font-family: "Montserrat", sans-serif;
-  display: inline-block;
   width: 200px;
   text-align: left;
   margin-right: 0.5em;
@@ -46,15 +45,15 @@ label {
   margin-left: 1.5em;
 }
 
-input,
-select {
+input {
   font-size: 1em;
   padding: 0.5em;
   font-family: "Montserrat", sans-serif;
-  width: 100%;
+  width: 300px;
   box-sizing: border-box;
   border: 1px solid #1b1b1e;
   border-radius: 10px;
+  margin-left: 1em;
 }
 button {
   color: white;
