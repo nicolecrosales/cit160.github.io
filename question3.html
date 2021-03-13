@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>Title</title>
+</head>
+<body>
+  <p>Please enter three numbers for:</p>
+  Start number: <input type="text" id="start" size="5"><br>
+  End number: <input type="text" id="end" size="5"><br>
+  Divisor number: <input type="text" id="divisor" size="5">
+  <p>You can see the integers between the start number and end number,inclusive, that are evenly divisible by divisor.</p>
+  <button onclick="integers()">Click Here</button>
+  <div><span id="display"></span></div>
+
+  <script>
+    function integers() {
+    /* Input: reading the three number entered from the user as integers.
+     * Processing: Determinate the integers between them and which are divisible by divisor
+     * Output: show the integers.
+     */
+    // INPUT
+    let a = parseFloat(document.getElementById('start').value);
+    let b = parseFloat(document.getElementById('end').value);
+    let c = parseFloat(document.getElementById('divisor').value);
+    // PROCESSING
+    let output = "";
+    for (let i = a; i <= b; i++) {
+        divi = i % c;
+        if (divi == 0) {
+            output += `${i} `;
+        }
+    }
+    // OUTPUT
+    document.getElementById('display').textContent = output;
+    }
+  </script>
+</body>
+</html>

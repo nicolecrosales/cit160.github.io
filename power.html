@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam 2 - Nicole Carrasco</title>
+</head>
+<body>
+    <header>
+        <h1>Exam 2 - part 2</h1>
+        <h2>Nicole Carrasco</h2>
+    </header>
+    <main>
+        <h3>To calculate powers of 2 from 0 to 31</h3>
+        <label><button onclick="ycalculate()">Calculate powers</button></label>
+        <hr>
+        <div><span id="display"></span></div>
+    </main>
+    <script>
+        function ycalculate() { 
+            /*Input: calculate powers.
+            * Processing: calculate the powers of 2 from 0 to 31.
+            * Output: the value of the powers of 2 from 0 to 31.
+            */
+            let output = "";
+            for (let i = 0; i <= 31; i++) {
+                result = Math.pow(2, i);
+                if (i != 31) {
+                   output += `${result}, `;
+                } else {
+                   output += `${result}`;
+                } 
+            }
+            document.getElementById('display').textContent = output;
+        }
+    </script>
+</body>
+</html>
