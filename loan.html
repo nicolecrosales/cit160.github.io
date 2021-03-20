@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nicole Carrasco</title>
+    <link href="css/invest.css" rel="stylesheet" />
+   </head>
+<body>
+    <header>
+        <h1>Loan Calculator</h1>
+    </header>
+    <main>
+        <label>Amount borrowed (principal): <input type="text" id="principal"></label>
+        <label>Annual interest rate (example: .08): <input type="text" id="annualrate"></label>
+        <label>Number of years: <input type="text" id="years"></label>
+        <label>Payments per years: <input type="text" id="payments"></label>
+        <label><button onclick="doPayment()">Compute payment</button></label>
+        <hr>
+        <div><span id="output"></span></div>
+        <label>Number of payments paid to date: <input type="text" id="numpaid"></label>
+        <label><button onclick="doBalance()">Compute payoff amount</button></label>
+        <hr>
+        <div><span id="output2"></span></div>
+
+    </main>
+    <footer>
+        &copy;2021 &bull; Nicole Carrasco &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script src="js/loan.js" defer></script>
+</body>
+</html>

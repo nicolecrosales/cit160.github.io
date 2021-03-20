@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nicole Carrasco</title>
+    <link href="css/invest.css" rel="stylesheet" />
+   </head>
+<body>
+    <header>
+        <h1>Investment Calculator</h1>
+    </header>
+    <main>
+        <label>Amount invested (principal): <input type="text" id="principal"></label>
+        <label>Annual rate (example: .08): <input type="text" id="annualrate"></label>
+        <label>Number of years: <input type="text" id="years"></label>
+        <label>Period per years: <input type="text" id="period"></label>
+       
+        
+        <label><button onclick="doFV()">Compute future value</button></label>
+        <hr>
+        <div><span id="output"></span></div>
+    </main>
+    <footer>
+        &copy;2021 &bull; Nicole Carrasco &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script src="js/invest.js" defer></script>
+</body>
+</html>
