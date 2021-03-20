@@ -65,7 +65,8 @@ button {
   border: solid 2px black;
   margin-left: 2em;
 }
-#output {
+#output,
+#output2 {
   color: #4f9fc2;
   font-size: 1.4em;
   font-weight: bold;

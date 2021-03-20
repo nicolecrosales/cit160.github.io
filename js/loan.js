@@ -16,6 +16,10 @@ function doPayment() {
 }
 function doBalance() {
     let paid = parseFloat(document.getElementById('numpaid').value);
+    let prin = parseFloat(document.getElementById('principal').value);
+    let ar = parseFloat(document.getElementById('annualrate').value);
+    let num = parseFloat(document.getElementById('years').value);
+    let payment = parseFloat(document.getElementById('payments').value);
 
     //PROCESS call another function to calculate the value with the data from the user.
     result2 = computeBalance(prin, ar, num, payment, paid);
@@ -36,8 +40,8 @@ function computepayment(principal, annualrate, years, periodsperyear) {
 function computeBalance (principal, annualrate, years, periodsperyear, numberOfPaymentPaidToDate) {
     a = principal;
     r = annualrate / periodsperyear;
-    n = years * periodsperyear;
     d = numberOfPaymentPaidToDate
+    p = computepayment(principal, annualrate, years, periodsperyear);
     b = (a * Math.pow((1+r), d)) - ((p * (Math.pow((1 + r), d) - 1)) / r)
     let digits = 2;
     let multiplier = Math.pow(10, digits);
